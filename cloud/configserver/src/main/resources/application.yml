@@ -1,0 +1,21 @@
+server:
+  port: 7300
+
+spring:
+  application:
+    name: configserver7300
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/dashuai1992/spring-config
+          searchPaths: respo
+          force-pull: true
+          username:
+          password:
+      label: master
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:7000/eureka/
